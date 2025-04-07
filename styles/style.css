@@ -1,6 +1,8 @@
 @import url('header.css');
 @import url('banner.css');
 @import url('carrossel.css');
+@import url('card.css');
+@import url('mais-vendidos.css');
 
 :root {
     --cor-de-fundo: #EBECEE;

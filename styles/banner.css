@@ -3,6 +3,7 @@
     color: var(--branco);
     text-align: center;
     padding: 2.5em 2em;
+    line-height: 1.5em;
 }
 
 .banner__titulo{
@@ -31,5 +32,5 @@
     text-align: center;
     color: var(--branco);
     background: url("../img/Lupa.svg") no-repeat;
-    background-position: 1em;
+    background-position: 1.5em;
 }
