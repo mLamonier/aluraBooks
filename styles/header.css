@@ -20,6 +20,8 @@
 }
 .container__imagem{
     padding: 1em;
+    width: 2em;
+    height: 2em;
 }
 
 .lista-menu{
