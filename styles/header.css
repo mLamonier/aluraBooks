@@ -1,11 +1,3 @@
-.cabeçalho__menu-hamburguer{
-    width: 40px;
-    height: 40px;
-    background-image: url("../img/Menu.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    display: inline-block;
-}
 .cabeçalho{
     background-color: var(--branco);
     display: flex;
@@ -30,10 +22,8 @@
     position: absolute;
     top: 100%;
     width: 60vw;
-}
-
-.container__botao:checked ~ .lista-menu{
-    display: block;
+    box-shadow: 4px 4px 15px var(--azul);
+    z-index: 2;
 }
 
 .lista-menu__titulo,
@@ -48,13 +38,9 @@
 }
 
 .lista-menu__link{
+    text-transform: uppercase;
     background: var(--azul-degrade);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-transform: uppercase;
-}
-
-.container__botao{
-    display: none;
 }

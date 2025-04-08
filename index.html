@@ -15,11 +15,9 @@
 <body>
     <header class="cabeçalho">
         <div class="container">
-            <input type="checkbox" id="menu" class="container__botao">
-            <label for="menu">
-                <span class="cabeçalho__menu-hamburguer container__imagem"></span>
-            </label>
-            <ul class="lista-menu">
+            <img class="container__imagem" src="img/Menu.svg" id="imagem-menu" onclick="statusMenu()">
+            <img src="img/Logo.svg" alt="Logo da Alurabooks" class="container__imagem">
+            <ul class="lista-menu" id="lista-menu">
                 <li class="lista-menu__titulo">Categorias</li>
                 <li class="lista-menu__item">
                     <a href="#" class="lista-menu__link">Programação</a>
@@ -37,7 +35,6 @@
                     <a href="#" class="lista-menu__link">Design & UX</a>
                 </li>
             </ul>
-            <img src="img/Logo.svg" alt="Logo da Alurabooks" class="container__imagem">
         </div>
         <div class="container">
             <a href="#"><img src="img/Favoritos.svg" alt="Meus favoritos" class="container__imagem"></a>
@@ -106,7 +103,7 @@
                 <div class="swiper-slide"><img src="img/Portugol.svg" alt="Livro sobre portugol da alurabooks"></div>
                 <div class="swiper-slide"><img src="img/Tuning.svg" alt="Livro sobre tuning da alurabooks"></div>
             </div>
-            
+
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
           </div>
@@ -132,18 +129,50 @@
           </div>
     </section>
 
+    <section class="tópicos">
+        <h2 class="tópicos__titulo">TÓPICOS VISITADOS RECENTEMENTE</h2>
+        <ul class="tópicos__lista">
+            <li class="tópicos__item">
+                <a href="#" class="tópicos__link">Android</a>
+            </li>
+            <li class="tópicos__item">
+                <a href="#" class="tópicos__link">Marketing Digital</a>
+            </li>
+            <li class="tópicos__item">
+                <a href="#" class="tópicos__link">Agile</a>
+            </li>
+            <li class="tópicos__item">
+                <a href="#" class="tópicos__link">Startups</a>
+            </li>
+            <li class="tópicos__item">
+                <a href="#" class="tópicos__link">HTML e CSS</a>
+            </li>
+            <li class="tópicos__item">
+                <a href="#" class="tópicos__link">Python</a>
+            </li>
+            <li class="tópicos__item">
+                <a href="#" class="tópicos__link">Orientação a Objetos</a>
+            </li>
+            <li class="tópicos__item">
+                <a href="#" class="tópicos__link">Java</a>
+            </li>
+        </ul>
+    </section>
+
+    <section class="contato">
+        <h2 class="contato__titulo">Fique por dentro das novidades!</h2>
+        <p class="contato__texto">Atualizações de e-books, novos livros, promoções e outros.</p>
+        <input type="email" placeholder="Cadastre seu e-mail" class="contato__email">
+    </section>
+
+    <hr/>
+
+    <footer class="rodapé">
+        <h2 class="rodapé__titulo">Grupo Alura</h2>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        const swiper = new Swiper('.swiper', {
-        spaceBetween: 10,
-        slidesPerView: 3,
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'bullets',
-        },
-        loop: true,
-        });
-    </script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
