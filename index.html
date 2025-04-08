@@ -15,8 +15,8 @@
 <body>
     <header class="cabeçalho">
         <div class="container">
-            <img class="container__imagem" src="img/Menu.svg" id="imagem-menu" onclick="statusMenu()">
-            <img src="img/Logo.svg" alt="Logo da Alurabooks" class="container__imagem">
+            <img class="container__imagem" src="img/Menu.svg" id="imagem-menu">
+            <a href="index.html" class="container__logo"><img src="img/Logo.svg" alt="Logo da Alurabooks" class="container__imagem"></a>
             <ul class="lista-menu" id="lista-menu">
                 <li class="lista-menu__titulo">Categorias</li>
                 <li class="lista-menu__item">
@@ -37,9 +37,9 @@
             </ul>
         </div>
         <div class="container">
-            <a href="#"><img src="img/Favoritos.svg" alt="Meus favoritos" class="container__imagem"></a>
-            <a href="#"><img src="img/Compras.svg" alt="Carrinho de compras" class="container__imagem"></a>
-            <a href="#"><img src="img/Usuário.svg" alt="Meu perfil" class="container__imagem"></a>
+            <a href="#" class="container__icone"><img src="img/Favoritos.svg" alt="Meus favoritos" class="container__imagem"></a>
+            <a href="#" class="container__icone"><img src="img/Compras.svg" alt="Carrinho de compras" class="container__imagem"></a>
+            <a href="#" class="container__icone"><img src="img/Usuário.svg" alt="Meu perfil" class="container__imagem"></a>
         </div>
     </header>
 
@@ -52,13 +52,9 @@
     <section class="carrossel">
         <h2 class="carrossel__titulo">Novos lançamentos</h2>
         <div class="swiper">
-            <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
 
-            <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
-
-                <!-- Slides -->
                 <div class="swiper-slide"><img src="img/ApacheKafka.svg" alt="Livro sobre apache kafka e spring boot da alurabooks"></div>
                 <div class="swiper-slide"><img src="img/Arquitetura.svg" alt="Livro sobre liderança em design da alurabooks"></div>
                 <div class="swiper-slide"><img src="img/Javascript.svg" alt="Livro sobre javascript assertivo da alurabooks"></div>
@@ -67,7 +63,6 @@
                 <div class="swiper-slide"><img src="img/Tuning.svg" alt="Livro sobre tuning da alurabooks"></div>
             </div>
           
-            <!-- If we need navigation buttons -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
           </div>
@@ -84,8 +79,8 @@
 
             <div class="card__botões">
                 <ul class="botões">
-                    <li class="botões__item"><img src="img/Favoritos.svg" class="botões__imagem" alt="Favoritar livro"></li>
-                    <li class="botões__item"><img src="img/Compras.svg" class="botões__imagem" alt="Adicionar no carrinho de compras"></li>
+                    <li class="botões__item"><a href="#"><img src="img/Favoritos.svg" class="botões__imagem" alt="Favoritar livro"></a></li>
+                    <li class="botões__item"><a href="#"><img src="img/Compras.svg" class="botões__imagem" alt="Adicionar no carrinho de compras"></li></a>
                 </ul>
                 <a href="#" class="botões__ancora">Saiba mais</a>
             </div>
@@ -121,8 +116,8 @@
 
             <div class="card__botões">
                 <ul class="botões">
-                    <li class="botões__item"><img src="img/Favoritos.svg" class="botões__imagem" alt="Favoritar livro"></li>
-                    <li class="botões__item"><img src="img/Compras.svg" class="botões__imagem" alt="Adicionar no carrinho de compras"></li>
+                    <li class="botões__item"><a href="#"><img src="img/Favoritos.svg" class="botões__imagem" alt="Favoritar livro"></a></li>
+                    <li class="botões__item"><a href="#"><img src="img/Compras.svg" class="botões__imagem" alt="Adicionar no carrinho de compras"></li></a>
                 </ul>
                 <a href="#" class="botões__ancora">Saiba mais</a>
             </div>
