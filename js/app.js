@@ -7,10 +7,11 @@ const swiper = new Swiper('.swiper', {
     },
 });
 
-// Função para exibir e ocultar menu-hamburguer
-document.getElementById('imagem-menu').addEventListener('click', function() {
-    let menu = document.getElementById('imagem-menu');
-    let listaMenu = document.getElementById('lista-menu');
+const menu = document.getElementById('imagem-menu');
+const listaMenu = document.getElementById('lista-menu');
+
+// Evento para exibir e ocultar o menu-hamburguer
+menu.addEventListener('click', function() {
     let displayAtual = window.getComputedStyle(listaMenu).display;
 
     if (displayAtual === "none") {
@@ -24,10 +25,8 @@ document.getElementById('imagem-menu').addEventListener('click', function() {
     }
 });
 
-// Função para fechar menu
+// Função para fechar o menu
 function fecharMenu() {
-    let menu = document.getElementById('imagem-menu');
-    let listaMenu = document.getElementById('lista-menu');
     let displayAtual = window.getComputedStyle(listaMenu).display;
     
     if (displayAtual === "block") {
@@ -37,14 +36,12 @@ function fecharMenu() {
     }
 };
 
-// Função para identificar clique fora da lista
-document.addEventListener('click', function(evento) {
-    let menu = document.getElementById('imagem-menu');
-    let listaMenu = document.getElementById('lista-menu');
+// Evento para identificar clique fora da lista
+document.addEventListener('click', function(event) {
     let displayAtual = window.getComputedStyle(listaMenu).display;
 
     if(displayAtual === "block"){
-        if (!listaMenu.contains(evento.target) && !menu.contains(evento.target)) {
+        if (!listaMenu.contains(event.target) && !menu.contains(event.target)) {
             fecharMenu();
             console.log("Acionado!")
         }    
@@ -52,8 +49,7 @@ document.addEventListener('click', function(evento) {
 });
 
 // Evento de rolagem de página para fechar menu
-window.addEventListener('scroll', function(evento) {
-    let listaMenu = document.getElementById('lista-menu');
+window.addEventListener('scroll', function() {
     let displayAtual = window.getComputedStyle(listaMenu).display    
     if(displayAtual === "block"){
         fecharMenu();

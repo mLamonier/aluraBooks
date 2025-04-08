@@ -62,8 +62,10 @@
 .tópicos__link:focus
 {
     background: var(--azul-degrade);
+    border-radius: 40%;
 }
 
 .container__icone:focus .container__imagem{
     background: var(--laranja);
+    border-radius: 40%;
 }

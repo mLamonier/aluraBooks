@@ -33,5 +33,11 @@
     text-align: center;
     color: var(--branco);
     background: url("../img/Lupa.svg") no-repeat;
-    background-position: 1.5em;
+    background-position: 1em;
+}
+
+@media (max-width: 390px){
+    .banner__pesquisa::placeholder{
+        background: none;
+    }
 }
