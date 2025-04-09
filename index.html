@@ -9,15 +9,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
     <header class="cabeçalho">
         <div class="container">
-            <img class="container__imagem" src="img/Menu.svg" id="imagem-menu">
-            <a href="index.html" class="container__logo"><img src="img/Logo.svg" alt="Logo da Alurabooks" class="container__imagem"></a>
-            <ul class="lista-menu" id="lista-menu">
+            <img class="container__imagem" src="img/Menu.svg" id="menu-hamburguer">
+
+            <ul class="lista-menu" id="lista-menu-celular">
                 <li class="lista-menu__titulo">Categorias</li>
                 <li class="lista-menu__item">
                     <a href="#" class="lista-menu__link">Programação</a>
@@ -35,9 +36,40 @@
                     <a href="#" class="lista-menu__link">Design & UX</a>
                 </li>
             </ul>
+
+            <a href="index.html" class="container__logo">
+                <img src="img/Logo.svg" alt="Logo da Alurabooks" class="container__imagem">
+                <img class="container__logo-texto" src="img/AluraBooks.svg">
+            </a>
         </div>
+
+        <ul class="opções">
+            <li class="opções__item" id="categorias-tablet">Categorias</li>
+
+            <ul class="lista-menu" id="lista-menu-tablet">
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Programação</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Front-end</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Infraestrutura</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Business</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Design & UX</a>
+                </li>
+            </ul>
+            
+            <li class="opções__item"><a href="#" class="opções__link">Favoritos</a></li>
+            <li class="opções__item"><a href="#" class="opções__link">Minha estante</a></li>
+        </ul>
+
         <div class="container">
-            <a href="#" class="container__icone"><img src="img/Favoritos.svg" alt="Meus favoritos" class="container__imagem"></a>
+            <a href="#" class="container__icone"><img src="img/Favoritos.svg" alt="Meus favoritos" class="container__imagem container__imagem--transparente"></a>
             <a href="#" class="container__icone"><img src="img/Compras.svg" alt="Carrinho de compras" class="container__imagem"></a>
             <a href="#" class="container__icone"><img src="img/Usuário.svg" alt="Meu perfil" class="container__imagem"></a>
         </div>
