@@ -1,12 +1,27 @@
-const swiper = new Swiper('.swiper', {
-    spaceBetween: 10,
-    slidesPerView: 3,
-    pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-    },
-});
+// Plugin matchMedia, usado para identificar tamanho de tela
+const mediaQuery = window.matchMedia("(min-width: 1024px)");
 
+if (mediaQuery.matches) {
+    let swiper = new Swiper('.swiper', {
+        spaceBetween: 60,
+        slidesPerView: 3,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+        },
+    });
+} else {
+    let swiper = new Swiper('.swiper', {
+        spaceBetween: 10,
+        slidesPerView: 3,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+        },
+    });
+};
+
+// Seletores
 const menuHamburguer = document.getElementById('menu-hamburguer');
 const listaMenuCelular = document.getElementById('lista-menu-celular');
 const categoriasTablet = document.getElementById('categorias-tablet');
@@ -38,11 +53,13 @@ menuHamburguer.addEventListener('click', function() {
     }
 });
 
+// Função para selecionar display atual do Celular
 function displayAtualCelular(){
     let displayAtualCelular = window.getComputedStyle(listaMenuCelular).display;
     return displayAtualCelular;
 }
 
+// Função para selecionar display atual do Tablet
 function displayAtualTablet(){
     let displayAtualTablet = window.getComputedStyle(listaMenuTablet).display;
     return displayAtualTablet;
