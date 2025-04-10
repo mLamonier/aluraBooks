@@ -1,7 +1,14 @@
 // Plugin matchMedia, usado para identificar tamanho de tela
-const mediaQuery = window.matchMedia("(min-width: 1024px)");
+const mediaQueryTablet = window.matchMedia("(min-width: 1024px)");
+const mediaQuery = mediaQueryTablet.matches;
 
-if (mediaQuery.matches) {
+// Seletores
+const menuHamburguer = document.getElementById('menu-hamburguer');
+const listaMenuCelular = document.getElementById('lista-menu-celular');
+const categoriasTablet = document.getElementById('categorias-tablet');
+const listaMenuTablet = document.getElementById('lista-menu-tablet');
+
+if (mediaQuery) {
     let swiper = new Swiper('.swiper', {
         spaceBetween: 60,
         slidesPerView: 3,
@@ -9,7 +16,26 @@ if (mediaQuery.matches) {
             el: '.swiper-pagination',
             type: 'bullets',
         },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
     });
+    
+    // Evento para exibir e ocultar o menu-hamburguer (Tela Celular)
+    categoriasTablet.addEventListener('click', function() {
+        let displayAtual = window.getComputedStyle(listaMenuTablet).display;
+    
+        if (displayAtual === 'none'){
+            listaMenuTablet.style.display = "block";
+            categoriasTablet.style.background = 'var(--azul-degrade)'
+            categoriasTablet.style.color = 'var(--branco)';
+        } else {
+            listaMenuTablet.style.display = "none";
+            categoriasTablet.style.background = 'var(--branco)'
+            categoriasTablet.style.color = '#000000';
+        }
+    });    
 } else {
     let swiper = new Swiper('.swiper', {
         spaceBetween: 10,
@@ -19,39 +45,22 @@ if (mediaQuery.matches) {
             type: 'bullets',
         },
     });
+
+    // Evento para exibir menu de categorias (Tela Tablet)
+    menuHamburguer.addEventListener('click', function() {
+        let displayAtual = window.getComputedStyle(listaMenuCelular).display;
+    
+        if (displayAtual === "none") {
+            listaMenuCelular.style.display = "block";
+            menuHamburguer.style.background = 'var(--azul-degrade)';
+            menuHamburguer.src = 'img/Menu-Aberto.svg';
+        } else {
+            listaMenuCelular.style.display = "none";
+            menuHamburguer.style.background = 'var(--branco)';
+            menuHamburguer.src = 'img/Menu.svg';
+        }
+    });    
 };
-
-// Seletores
-const menuHamburguer = document.getElementById('menu-hamburguer');
-const listaMenuCelular = document.getElementById('lista-menu-celular');
-const categoriasTablet = document.getElementById('categorias-tablet');
-const listaMenuTablet = document.getElementById('lista-menu-tablet');
-
-// Evento para exibir menu de categorias (Tela Tablet)
-categoriasTablet.addEventListener('click', function() {
-    let displayAtual = window.getComputedStyle(listaMenuTablet).display;
-
-    if (displayAtual === 'none'){
-        listaMenuTablet.style.display = "block";
-    } else {
-        listaMenuTablet.style.display = "none";
-    }
-});
-
-// Evento para exibir e ocultar o menu-hamburguer (Tela Celular)
-menuHamburguer.addEventListener('click', function() {
-    let displayAtual = window.getComputedStyle(listaMenuCelular).display;
-
-    if (displayAtual === "none") {
-        listaMenuCelular.style.display = "block";
-        menuHamburguer.style.background = 'var(--azul-degrade)';
-        menuHamburguer.src = 'img/Menu-Aberto.svg';
-    } else {
-        listaMenuCelular.style.display = "none";
-        menuHamburguer.style.background = 'var(--branco)';
-        menuHamburguer.src = 'img/Menu.svg';
-    }
-});
 
 // Função para selecionar display atual do Celular
 function displayAtualCelular(){
@@ -75,6 +84,8 @@ function fecharMenu() {
     }
     if (displayAtualTablet() === "block") {
         listaMenuTablet.style.display = "none";
+        categoriasTablet.style.background = 'var(--branco)'
+        categoriasTablet.style.color = '#000000';
         console.log("Acionado - Tablet!")
     }
 };

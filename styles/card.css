@@ -62,3 +62,10 @@
 .descrição__imagem{
     padding-left: 0.5em;
 }
+
+@media (min-width: 1024px){
+    .card{
+        width: 50%;
+        margin: 2em auto;
+    }
+}

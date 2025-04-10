@@ -30,6 +30,7 @@
     .carrossel__titulo{
         font-size: 26px;
     }
+
     .swiper-pagination{
         margin: 2em 0 3em 0;
     }
@@ -38,9 +39,25 @@
         width: 60%;
     }
 
+    :root{
+        --swiper-navigation-size: 15px;
+        --swiper-theme-color: var(--branco);
+    }
+
     .swiper-button-prev,
     .swiper-button-next{
         display: block;
         top: 60%;
+        border-radius: 100%;
+        background: var(--azul-degrade);
+        padding: 1em;
+        box-shadow: 1px 2px 5px 1px rgb(0, 0, 0, 0.2);
+        font-weight: bolder;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .swiper-pagination-bullet{
+        width: 10px;
+        height: 10px;
     }
 }
