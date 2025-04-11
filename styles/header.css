@@ -48,7 +48,7 @@
 }
 
 .lista-menu__item:hover {
-    background-color: var(--azul);
+    background: var(--azul-degrade);
 }
 
 .lista-menu__item:hover .lista-menu__link {
@@ -57,10 +57,7 @@
     text-decoration: none;
 }
 
-.container__logo:focus .container__imagem,
-.botões__ancora:focus,
-.tópicos__link:focus
-{
+.container__logo:focus .container__imagem {
     background: var(--azul-degrade);
     border-radius: 40%;
 }
@@ -107,6 +104,7 @@
 
     .lista-menu{
         width: 11em;
+        top: 80%;
     }
 
     .cabeçalho{

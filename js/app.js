@@ -24,16 +24,10 @@ if (mediaQuery) {
     
     // Evento para exibir e ocultar o menu-hamburguer (Tela Celular)
     categoriasTablet.addEventListener('click', function() {
-        let displayAtual = window.getComputedStyle(listaMenuTablet).display;
-    
-        if (displayAtual === 'none'){
-            listaMenuTablet.style.display = "block";
-            categoriasTablet.style.background = 'var(--azul-degrade)'
-            categoriasTablet.style.color = 'var(--branco)';
+        if (displayAtualTablet() === 'none'){
+            styleTabletOpen();
         } else {
-            listaMenuTablet.style.display = "none";
-            categoriasTablet.style.background = 'var(--branco)'
-            categoriasTablet.style.color = '#000000';
+            styleTabletClosed();
         }
     });    
 } else {
@@ -48,16 +42,10 @@ if (mediaQuery) {
 
     // Evento para exibir menu de categorias (Tela Tablet)
     menuHamburguer.addEventListener('click', function() {
-        let displayAtual = window.getComputedStyle(listaMenuCelular).display;
-    
-        if (displayAtual === "none") {
-            listaMenuCelular.style.display = "block";
-            menuHamburguer.style.background = 'var(--azul-degrade)';
-            menuHamburguer.src = 'img/Menu-Aberto.svg';
+        if (displayAtualCelular() === "none") {
+            styleCelularOpen();
         } else {
-            listaMenuCelular.style.display = "none";
-            menuHamburguer.style.background = 'var(--branco)';
-            menuHamburguer.src = 'img/Menu.svg';
+            styleCelularClosed();
         }
     });    
 };
@@ -74,19 +62,41 @@ function displayAtualTablet(){
     return displayAtualTablet;
 }
 
+// Função de definição de estilos celular menu aberto
+function styleCelularOpen(){
+    listaMenuCelular.style.display = "block";
+    menuHamburguer.style.background = 'var(--azul-degrade)';
+    menuHamburguer.src = 'img/Menu-Aberto.svg';
+}
+
+// Função de definição de estilos celular menu fechado
+function styleCelularClosed(){
+    listaMenuCelular.style.display = "none";
+    menuHamburguer.style.background = 'var(--branco)';
+    menuHamburguer.src = 'img/Menu.svg';
+}
+
+// Função de definição de estilos tablet menu aberto
+function styleTabletOpen(){
+    listaMenuTablet.style.display = "block";
+    categoriasTablet.style.background = 'var(--azul-degrade)'
+    categoriasTablet.style.color = 'var(--branco)';
+}
+
+// Função de definição de estilos tablet menu fechado
+function styleTabletClosed(){
+    listaMenuTablet.style.display = "none";
+    categoriasTablet.style.background = 'var(--branco)'
+    categoriasTablet.style.color = 'var(--preto)';
+}
+
 // Função para fechar o menu (Tela Celular + Tablet)
 function fecharMenu() {
     if (displayAtualCelular() === "block") {
-        listaMenuCelular.style.display = "none";
-        menuHamburguer.style.background = 'var(--branco)';
-        menuHamburguer.src = 'img/Menu.svg';
-        console.log("Acionado - Celular!")
+        styleCelularClosed();
     }
     if (displayAtualTablet() === "block") {
-        listaMenuTablet.style.display = "none";
-        categoriasTablet.style.background = 'var(--branco)'
-        categoriasTablet.style.color = '#000000';
-        console.log("Acionado - Tablet!")
+        styleTabletClosed();
     }
 };
 

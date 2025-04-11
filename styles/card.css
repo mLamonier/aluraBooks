@@ -63,6 +63,10 @@
     padding-left: 0.5em;
 }
 
+.botões__ancora:focus{
+    background: var(--azul-degrade);
+}
+
 @media (min-width: 1024px){
     .card{
         width: 50%;

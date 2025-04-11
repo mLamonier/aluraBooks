@@ -30,6 +30,11 @@
     margin: 2em 0.5em;
 }
 
+.tópicos__link:focus{
+    background: var(--branco);
+    color: var(--azul);
+}
+
 @media (min-width: 1024px){
     .tópicos__titulo{
         font-size: 24px;
