@@ -4,11 +4,15 @@ hr{
 
 .rodapé{
     background-color: var(--branco);
-    padding: 1em;    
+    padding: 1em 1em 2.2em 1em;    
 }
 
 .lista-rodapé{
     display: none;
+}
+
+.lista-rodapé__link:hover{
+    text-decoration: underline;
 }
 
 @media (min-width: 1024px){
@@ -43,5 +47,12 @@ hr{
 
     .rodapé__titulo{
         font-size: 24px;
+    }
+}
+
+@media (min-width: 1728px){
+    .lista-rodapé{
+        border-left: 1px solid var(--cinza-claro);
+        padding-left: 1em;
     }
 }

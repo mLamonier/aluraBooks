@@ -30,7 +30,8 @@
     margin: 2em 0.5em;
 }
 
-.tópicos__link:focus{
+.tópicos__link:focus,
+.tópicos__link:hover{
     background: var(--branco);
     color: var(--azul);
 }
@@ -45,5 +46,17 @@
 
     .tópicos__link{
         font-size: 24px;
+    }
+    .tópicos{
+        padding-bottom: 1.5em;
+    }
+}
+
+@media (min-width: 1728px){
+    .tópicos{
+        padding: 3em 25vw;
+    }
+    .tópicos__titulo{
+        margin-top: 0;
     }
 }

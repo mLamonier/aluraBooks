@@ -36,6 +36,11 @@
     padding-left: 2.5em;
 }
 
+.contato__email:focus::placeholder{
+  color: transparent;
+  background: none;
+}
+
 @media (min-width: 1024px){
   .contato{
     display: flex;
@@ -51,5 +56,14 @@
   }
   .contato__email{
     width: 30%;
+  }
+}
+
+@media (min-width: 1728px){
+  .contato{
+    padding: 3em 20vw;
+  }
+  .contato__descrição{
+    width: 38%;
   }
 }

@@ -61,3 +61,33 @@
         height: 10px;
     }
 }
+
+@media (min-width: 1728px){
+    .carrossel__container{
+        display: flex;
+        margin: 3em 10vw 6em 10vw;
+    }
+
+    .carrossel__titulo{
+        font-size: 32px;
+        padding: 1.5em 0 0.7em;
+    }
+
+    .swiper-pagination{
+        margin: 0 0 2em 0;
+    }
+
+    .swiper{
+        width: 80%;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next{
+        top: 54%;
+    }
+
+    .swiper-pagination-bullet{
+        width: 12px;
+        height: 12px;
+    }
+}

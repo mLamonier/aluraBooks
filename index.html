@@ -69,9 +69,17 @@
         </ul>
 
         <div class="container">
-            <a href="#" class="container__icone"><img src="img/Favoritos.svg" alt="Meus favoritos" class="container__imagem container__imagem--transparente"></a>
-            <a href="#" class="container__icone"><img src="img/Compras.svg" alt="Carrinho de compras" class="container__imagem"></a>
-            <a href="#" class="container__icone"><img src="img/Usuário.svg" alt="Meu perfil" class="container__imagem"></a>
+            <a href="#" class="container__icone">
+                <img src="img/Favoritos.svg" alt="Meus favoritos" class="container__imagem container__imagem--transparente">
+            </a>
+            <a href="#" class="container__icone">
+                <img src="img/Compras.svg" alt="Carrinho de compras" class="container__imagem">
+                <p class="container__texto">Minha sacola</p>
+            </a>
+            <a href="#" class="container__icone">
+                <img src="img/Usuário.svg" alt="Meu perfil" class="container__imagem">
+                <p class="container__texto">Meu perfil</p>
+            </a>
         </div>
     </header>
 
@@ -82,7 +90,8 @@
     </section>
 
     <section class="carrossel">
-        <h2 class="carrossel__titulo">Novos lançamentos</h2>
+        <h2 class="carrossel__titulo">Últimos lançamentos</h2>
+        <div class="carrossel__container">
         <div class="swiper">
             <div class="swiper-pagination"></div>
 
@@ -118,10 +127,12 @@
                 <a href="#" class="botões__ancora">Saiba mais</a>
             </div>
           </div>
+        </div>
     </section>
 
     <section class="carrossel">
         <h2 class="carrossel__titulo">Mais Vendidos</h2>
+        <div class="carrossel__container">
         <div class="swiper">
             <div class="swiper-pagination"></div>
 
@@ -140,7 +151,7 @@
           <div class="card">
             <div class="card__descrição">
                 <div class="descrição">
-                    <img src="img/Estrelinhas.svg" alt="Estrelinhas">
+                    <img src="img/Estrelinhas.svg" alt="Estrelinhas" class="descrição__estrelinhas">
                     <h3 class="descrição__titulo">Autora do Mês</h3>
                     <h2 class="descrição__titulo-livro">Juliana Agarikov</h2>
                     <p class="descrição__texto">Analista de sistemas e escritora, Juliana é especialista em Front-End.</p>
@@ -156,6 +167,7 @@
                 <a href="#" class="botões__ancora">Saiba mais</a>
             </div>
           </div>
+        </div>
     </section>
 
     <section class="tópicos">
