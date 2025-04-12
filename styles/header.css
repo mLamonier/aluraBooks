@@ -86,7 +86,7 @@
     }
 
     .opções__item{
-        padding: 1em;
+        padding: 1.5em 1em;
         text-transform: uppercase;
     }
 
@@ -102,7 +102,6 @@
 
     .lista-menu{
         width: 11em;
-        top: 80%;
     }
 
     .cabeçalho{
@@ -125,6 +124,11 @@
         align-items: center;
         text-decoration: none;
         color: var(--preto);
+        margin: 0 0.8em;
+    }
+
+    .container__imagem{
+        padding: 0.5em;
     }
 
     .opções{
@@ -132,7 +136,7 @@
         margin-left: 3em;
         user-select: none;
     }
-    
+
     .container__texto{
         display: block;
     }
