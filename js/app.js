@@ -1,8 +1,8 @@
 // Plugin matchMedia, usado para identificar tamanho de tela
-const mediaQueryCelularSelect = window.matchMedia("(min-width: 428px)");
+const mediaQueryCelularSelect = window.matchMedia("(min-width: 428px) and (max-width: 1024px)");
 const mediaQueryCelular = mediaQueryCelularSelect.matches;
 
-const mediaQueryTabletSelect = window.matchMedia("(min-width: 1024px)");
+const mediaQueryTabletSelect = window.matchMedia("(min-width: 1024px) and (max-width: 1728px)");
 const mediaQueryTablet = mediaQueryTabletSelect.matches;
 
 const mediaQueryDesktopSelect = window.matchMedia("(min-width: 1728px)");
