@@ -22,7 +22,7 @@
 
 ## 🚀 Visualização
 
-🔗 **Deploy**: https://mlamonier.github.io/alurabooks/
+🔗 **Deploy**: https://mlamonier.github.io/aluraBooks/
 
 ![AluraBooks Screenshot](img/captura%20de%20tela%20site.png)
 
